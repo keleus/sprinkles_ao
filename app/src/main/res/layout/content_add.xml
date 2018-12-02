@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.AddActivity"
+    tools:showIn="@layout/activity_add">
+    <com.bruce.pickerview.LoopView
+        android:id="@+id/loop_view"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        app:canLoop="true"
+        app:centerTextColor="#ff000000"
+        app:drawItemCount="7"
+        app:initPosition="3"
+        app:lineColor="@color/colorPrimary"
+        app:textSize="25sp"
+        app:topBottomTextColor="#ffafafaf"
+        android:layout_below="@+id/linear2"
+        />
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/add_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/value_add"
+            android:inputType="numberDecimal" />
+
+        <com.gigamole.navigationtabstrip.NavigationTabStrip
+            android:id="@+id/nav_tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:nts_color="#111111"
+            app:nts_size="15sp"
+            app:nts_weight="3dp"
+            app:nts_factor="2.5"
+            app:nts_titles="@array/titles"
+            app:nts_type="point"
+            app:nts_gravity="top"
+            app:nts_corners_radius="1.5dp"
+            app:nts_animation_duration="300"
+            app:nts_active_color="#111111"
+            app:nts_inactive_color="#aaaaaa">
+
+        </com.gigamole.navigationtabstrip.NavigationTabStrip>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="80dp"
+            android:numColumns="5"
+            android:stretchMode="spacingWidthUniform">
+
+        </GridView>
+
+
+         <TextView
+             android:id="@+id/add_time"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:text="@string/time_add"
+             android:textSize="18sp"
+             android:textColor="#aaa"
+             android:gravity="center_vertical"
+             />
+
+
+
+        <EditText
+            android:id="@+id/add_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/des_add"
+            />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
