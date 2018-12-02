@@ -14,7 +14,7 @@ Android 8.0 更改了 ContentResolver.notifyChange() 和 registerContentObserver
 Failed to find provider null for user 0; expected to find a valid ContentProvider for this authority
 ```
 
-解决的方法也很简单，具体内容见[说明文档]()
+解决的方法也很简单，在此就不再做说明，可自行对比本项目与原项目的差异。
 
 ## sprinkles_ao的优点
 创建JavaBean类时就可以通过@Key @Table的方式关联表，无需编写其它如XML的关联文件。
