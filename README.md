@@ -24,6 +24,14 @@ Failed to find provider null for user 0; expected to find a valid ContentProvide
 Model类中继承的save()和delete()方法简单好用，添加删除十分方便。
 
 ## 初始化
+#### 引入项目
+1.下载源码，并解压。将library复制到项目根目录下（与app文件夹同级）
+
+2.在`settings.gradle`中在`include:'app:'`后添加：`,':library'`
+
+3.在app目录下的`build.gradle`中添加`implementation project(':library')`
+
+可参考项目app中的样例程序
 
 #### 声明provide
 在项目的 AndroidManifest.xml 文件中声明provide：
